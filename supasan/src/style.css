@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Prompt', sans-serif;
+  }
+}
+
+/* ระบบกรองหมวดหมู่ด้วย CSS Pure (ไม่ต้องใช้ JS) */
+#cat-noodle:checked ~ div .menu-card:not(.item-noodle),
+#cat-snack:checked ~ div .menu-card:not(.item-snack),
+#cat-drink:checked ~ div .menu-card:not(.item-drink) {
+  display: none;
+}
